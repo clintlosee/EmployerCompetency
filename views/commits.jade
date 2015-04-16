@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    div(ng-controller="CommitCtrl")
+        img(ng-src="{{commits[0].author.avatar_url}}")
+        h2 {{commits[0].commit.author.name}} has {{commits.length}} total commits.
+        ol
+            li(ng-repeat="obj in commits") {{obj.commit.message}}

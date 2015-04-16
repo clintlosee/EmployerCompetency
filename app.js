@@ -26,6 +26,10 @@ app.use('/', routes);
 app.use('/data', users);
 app.use('/api', routes);
 
+app.use('/commits', function(req, res) {
+    res.render('commits');
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
