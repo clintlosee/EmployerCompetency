@@ -1,6 +1,7 @@
 extends layout
 
 block content
+    a(href='/') Home
     div(ng-controller="CommitCtrl")
         img(ng-src="{{commits[0].author.avatar_url}}")
         h2 {{commits[0].commit.author.name}} has {{commits.length}} total commits.
